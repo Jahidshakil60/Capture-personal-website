@@ -1,6 +1,8 @@
 import React from 'react'
 import home1 from '../img/home1.png'
 import {About, Description, Image} from '../styles'
+import {motion} from 'framer-motion'
+import {titleAnim , fade,photoAnim} from "../animation"
 
 function AboutSection() {
     return (
@@ -8,21 +10,21 @@ function AboutSection() {
             <Description>
                 <div className="title">
                     <div className="hide">
-                        <h2>We work to make</h2>
+                        <motion.h2 variants={titleAnim}>We work to make</motion.h2>
                     </div>
                     <div className="hide">
-                        <h2>your <span>dreams</span></h2>
+                        <motion.h2 variants={titleAnim}>your <span>dreams</span></motion.h2>
                     </div>
                     <div className="hide">
-                        <h2>come true</h2>
+                        <motion.h2 variants={titleAnim}>come true</motion.h2>
                     </div>
-                    <p>Contact us for photography or videography ideas that you have.We have proffetionals with good skills.</p>
-                    <button>Contact us</button>
+                    <motion.p variants={fade}>Contact us for photography or videography ideas that you have.We have proffetionals with good skills.</motion.p>
+                    <motion.button variants={fade}>Contact us</motion.button>
 
                 </div>
             </Description>
             <Image>
-                <img src={home1} alt="" />
+                <motion.img variants={photoAnim} src={home1} alt="" />
             </Image>
         </About>
     )

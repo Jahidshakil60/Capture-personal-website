@@ -30,6 +30,7 @@ const StyledNav= styled.nav`
   a{
       color: white;
       text-decoration: none;
+    
   }
 
   ul{
@@ -45,7 +46,11 @@ const StyledNav= styled.nav`
 
   li{
       margin-left: 3rem;
-      font-size: 1.2rem;
+      font-size: 0.5rem;
+
+      a{
+        font-size: 0.8rem;
+      }
   }
 
 `;
