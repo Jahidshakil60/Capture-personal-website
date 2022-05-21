@@ -23,7 +23,11 @@ function MovieDetail() {
   }, [movies, url]);
   
   return (
-    <Details exit="exit" variants={pageAnimation} initial="hidden" animate="show">
+    <>
+    { movie &&(
+
+      
+      <Details exit="exit" variants={pageAnimation} initial="hidden" animate="show">
       <HeadLine>
         <h2>{movie.title}</h2>
         <img src={movie.mainImg} alt="" />
@@ -33,13 +37,16 @@ function MovieDetail() {
       <Awards>
          {movie.awards.map((award)=>(
            <Award title={award.title} description={award.description} key={award.title}/>
-         ))}
+           ))}
       </Awards>
 
       <ImageDisplay>
             <img src={movie.secondaryImg} alt="movie" />
           </ImageDisplay>
     </Details>
+    )
+    }
+  </>
   )
 }
 
